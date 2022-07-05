@@ -258,3 +258,24 @@ struct temp1{ </br>
 [배열 선언]
 
 int a[10] = {5, 10, 15, 20, 25};
+
+#### 포인터 변수가 구조체 주소를 갖는 경우
+```
+#include<stdio.h> </br>
+void main(void){ </br>
+  struct node{ </br>
+    char data;</br>
+    struct node *link; </br>
+    }a,b,c,*p; </br>
+    
+    p = &a; </br>
+    a.data = 'A'; </br>
+    a. link = &b; </br>
+    b.data = 'B'; </br>
+    b.link = &c; </br>
+    c.dat = 'C'; </br>
+    c. link = NULL; </br>
+    }
+ ```   
+    
+^: NULL 값에 해당하는 기호 명칭은 circumplex 또는 caret</br>
