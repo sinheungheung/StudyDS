@@ -225,3 +225,15 @@ b1.writer.e_mail = "mirim1@e-mirim.hs.kr"; </br>
 b1.value = 14000; </br>
 b1.publisher = "나라말"; </br>
 
+## 구조체 패딩(Padding) 현상
+구조체는 구성원 중 가장 큰 데이터 타입을 기준하여 배수로 크기가 정해진다
+struct temp1{
+  char ch;
+  int vaule;
+  };
+  
+<img width="692" alt="패딩현상" src="https://user-images.githubusercontent.com/80873447/177321120-b284f74e-2fca-4800-8324-a6d9b11fa775.png">
+
+가장 큰 데이터 타입은 int(4byte)고 구성원이 2개 이므로 4 X 2 = 8byte 크기로 temp1 구조체가 준비된다</br>
+*sizeof(struct temp1)은 8* </br>
+
