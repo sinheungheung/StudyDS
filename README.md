@@ -279,3 +279,16 @@ void main(void){ </br>
  ```   
     
 ^: NULL 값에 해당하는 기호 명칭은 circumplex 또는 caret</br>
+
+## 동적 메모리 할당
+### 메모리 영역(C 프로그램)
+
+CODE -> DATA -> BSS*B -> STACK -> HEAP </br>
+[CODE] 함수 실행코드 </br>
+[DATA] 초기화된 전역변수 </br>
+[BSS*] 초기화 안된 전역변수 </br>
+[STACK] 지역변수(함수 호출하면 점유, 함수 정료되면 소멸) </br>
+[HEAP] 동적할당(할당 함수 malloc(), calloc(), 소멸 함수 free()) </br>
+
+CODE ~ STACK: 정적 할당 영역으로 컴파일 할 때 점유 할 메모리 크기가 결정됨 실행코드, 전역변수, 지역변수 </br>
+HEAP: 실행 중에 함수를 사용하여 메모리 할당하고 해제하며 기본 제공 크기 이상의 할당이 가능함 </br> 
