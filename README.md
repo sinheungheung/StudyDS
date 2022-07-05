@@ -226,7 +226,7 @@ b1.value = 14000; </br>
 b1.publisher = "나라말"; </br>
 
 ## 구조체 패딩(Padding) 현상
-구조체는 구성원 중 가장 큰 데이터 타입을 기준하여 배수로 크기가 정해진다
+구조체는 구성원 중 가장 큰 데이터 타입을 기준하여 배수로 크기가 정해진다</br>
 struct temp1{
   char ch;
   int vaule;
