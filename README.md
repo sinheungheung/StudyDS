@@ -324,3 +324,26 @@ STACK 영역은 기본 제공 크기 이상을 요구하면 프로그램 실행�
 #### 이중 연결 리스트✏️
 <img width="943" alt="이중 연결 리스트" src="https://user-images.githubusercontent.com/80873447/177345819-9a28b44b-40ae-43d6-a359-2188b75329f6.png">
 
+## 단순 연결 리스트 운용
+### 노드 준비
+노드는 연결 리스트를 구성하는 단위 요소로 최소 두 개의 필드를 가진다 </br>  
+하나는 데이터, 다른 하나는 연결할 노드의 주소를 가져야 하므로 구조체로 준비 </br>  
+
+// 문자를 갖기 위한 노드 준비 </br>  
+```
+struct node{
+  char data;
+  struct node *link;
+  };
+```
+
+// 노드를 동적 할당 받아 head가 간접 소유 </br> 
+```
+struct node *head = (struct node*)malloc(sizeof(struct node));
+```
+<img width="269" alt="간접소유" src="https://user-images.githubusercontent.com/80873447/177347516-40b22f47-366e-47c5-bd72-24b9296e8cba.png">
+
+
+
+
+
