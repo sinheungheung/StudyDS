@@ -373,6 +373,20 @@ p -> link = ins;
 struct node *del = p -> link;
 p -> link = del -> link;
 free(del); 
+```
+
+## 스택
+### 스택 정의
+최근에 저장한 데이터를 먼저 사용하는 구조로 LIFO(Last In First Out) 구조라고 칭함 </br>
+
+[스택 용어]
+* push(): 스택에 데이터를 삽입하는 작업 </br>
+* pop(): 스택의 top에서 데이터를 꺼내는 작업 </br>
+* overflow: limit을 벗어나면 발생 </br>
+* limit: push할 수 있는 한계로 배열의 끝 </br>
+* top: 데이터 상단 </br>
+* base: 스택의 시작 위치로 가장 아래 쪽. 즉, 배열 인덱스 0 </br>
+* underflow: base를 벗어나면 발생. 즉, 배열 인덱스 -1이하 </br>
 
 
 
