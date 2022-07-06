@@ -343,6 +343,40 @@ struct node *head = (struct node*)malloc(sizeof(struct node));
 ```
 <img width="269" alt="간접소유" src="https://user-images.githubusercontent.com/80873447/177347516-40b22f47-366e-47c5-bd72-24b9296e8cba.png">
 
+### 노드 추가
+// p가 간접 소유한 노드 다음에 새로운 노드 추가 </br> 
+```
+p -> link = (struct node*)malloc(sizeof(struct node));
+```
+<img width="626" alt="노드추가" src="https://user-images.githubusercontent.com/80873447/177561237-61f4aed3-6b70-488a-8128-b3afcc60c6e9.png">
+
+// p는 다음 노드로 이동 </br>
+```
+p = p -> link;
+```
+
+<img width="623" alt="다음노드로이동" src="https://user-images.githubusercontent.com/80873447/177561273-c48b3ce2-b7fb-415c-9c07-f1708b578d0a.png">
+
+### 노드 삽입
+// p 다음에 노드 삽입 </br>
+
+```
+struct node *ins = (struct node*)malloc(sizeof(struct node));
+ins -> data = 'O';
+ins -> link = p -> link;
+p -> link = ins;
+```
+
+### 노드 삭제
+// p 다음에 노드 삭제 </br>
+```
+struct node *del = p -> link;
+p -> link = del -> link;
+free(del); 
+
+
+
+
 
 
 
